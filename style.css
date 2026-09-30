@@ -1,0 +1,1165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("./images/gaming-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.hero-header {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+
+    margin: 18px auto 0;
+
+    padding: 14px 22px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(15, 15, 15, 0.58);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(255, 122, 0, 0.08);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.logo-area {
+    min-width: 230px;
+
+    text-align: center;
+}
+
+.brand-main {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(10, 10, 10, 0.7);
+
+    border: 2px solid #ff7a00;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 12px rgba(255, 122, 0, 0.35),
+        inset 0 0 10px rgba(255, 122, 0, 0.08);
+}
+
+.site-logo {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 122, 0, 0.35));
+}
+
+.logo-area h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    color: #ff7a00;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 12px rgba(255, 122, 0, 0.35);
+}
+
+.logo-area h1 span {
+    color: white;
+}
+
+.brand-tag {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    padding: 4px 10px;
+
+    border: 1px solid rgba(255, 122, 0, 0.5);
+
+    border-radius: 20px;
+
+    color: #ff7a00;
+
+    background: rgba(255, 122, 0, 0.08);
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.logo-area p {
+    margin-top: 5px;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   HEADER CENTER
+========================= */
+
+.header-center {
+    flex: 1;
+
+    text-align: center;
+}
+
+.header-center h2 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 12px rgba(255, 122, 0, 0.25);
+}
+
+.header-center p {
+    margin-top: 5px;
+
+    color: #999;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   HEADER STATUS
+========================= */
+
+.giveaway-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.status-box {
+    min-width: 75px;
+
+    padding: 8px 10px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+}
+
+.status-box span {
+    display: block;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.status-box strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ff7a00;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.spin-page {
+    width: 100%;
+
+    min-height: calc(100vh - 100px);
+
+    padding: 30px 20px 50px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.spin-box {
+    width: 100%;
+
+    max-width: 760px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: rgba(10, 10, 10, 0.44);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(255, 122, 0, 0.05);
+}
+
+.spin-box h2 {
+    color: #ff7a00;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 15px rgba(255, 122, 0, 0.25);
+}
+
+.spin-subtitle {
+    margin-top: 8px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   UID INPUT
+========================= */
+
+.uid-input {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.uid-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(10, 10, 10, 0.58);
+
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+.uid-input input::placeholder {
+    color: #777;
+}
+
+.uid-input input:focus {
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 0 15px rgba(255, 122, 0, 0.12);
+}
+
+.uid-input button {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff7a00;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.uid-input button:hover {
+    background: #ff3d00;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(255, 61, 0, 0.25);
+}
+
+
+/* =========================
+   PLAYERS
+========================= */
+
+.players {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 25px auto;
+
+    padding: 18px;
+
+    background: rgba(10, 10, 10, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 122, 0, 0.03);
+}
+
+.players h3 {
+    margin-bottom: 12px;
+
+    color: #ff7a00;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+#uidList {
+    width: 100%;
+
+    list-style: none;
+
+    max-height: 260px;
+
+    overflow-y: auto;
+
+    padding-right: 4px;
+}
+
+#uidList::-webkit-scrollbar {
+    width: 5px;
+}
+
+#uidList::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+#uidList::-webkit-scrollbar-thumb {
+    background: #ff7a00;
+
+    border-radius: 10px;
+}
+
+#uidList li {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 13px 15px;
+
+    margin-bottom: 8px;
+
+    background: rgba(30, 30, 30, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+#uidList li:hover {
+    border-color: rgba(255, 122, 0, 0.45);
+
+    background: rgba(255, 122, 0, 0.08);
+
+    transform: translateX(3px);
+}
+
+#uidList li button {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 8px;
+
+    background: rgba(255, 61, 0, 0.15);
+
+    color: #ff6a00;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#uidList li button:hover {
+    background: #ff3d00;
+
+    color: white;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 12px rgba(255, 61, 0, 0.35);
+}
+
+
+/* =========================
+   CONTINUE BUTTON
+========================= */
+
+#continueBtn {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 15px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8a00,
+            #ff3d00
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 8px 25px rgba(255, 61, 0, 0.2);
+}
+
+#continueBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 61, 0, 0.32);
+}
+
+
+/* =========================
+   WHEEL
+========================= */
+
+.wheel-container {
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+
+    max-width: 100%;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#wheel {
+    width: 500px;
+    height: 500px;
+
+    max-width: 100%;
+
+    border-radius: 50%;
+
+    border: 5px solid #ff7a00;
+
+    box-shadow:
+        0 0 15px rgba(255, 122, 0, 0.35),
+        0 0 35px rgba(255, 122, 0, 0.12);
+}
+
+.wheel-pointer {
+    position: absolute;
+
+    top: -12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    color: #ff7a00;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 10px rgba(255, 122, 0, 0.7),
+        0 0 20px rgba(255, 61, 0, 0.4);
+
+    filter:
+        drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+/* =========================
+   SPIN BUTTON
+========================= */
+
+#spinWheelBtn {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 17px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8a00,
+            #ff3d00
+        );
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(255, 61, 0, 0.25),
+        0 0 20px rgba(255, 122, 0, 0.15);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+#spinWheelBtn:hover {
+    transform: translateY(-3px) scale(1.01);
+
+    box-shadow:
+        0 12px 35px rgba(255, 61, 0, 0.35),
+        0 0 35px rgba(255, 122, 0, 0.30);
+}
+
+#spinWheelBtn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.25),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+
+    0% {
+        left: -120%;
+    }
+
+    45% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+#spinWheelBtn:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+#backToUidsBtn {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-top: 12px;
+
+    padding: 14px 25px;
+
+    border: 1px solid #444;
+
+    border-radius: 12px;
+
+    background: #151515;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#backToUidsBtn:hover {
+    border-color: #ff7a00;
+
+    color: #ff7a00;
+
+    background: #1c1c1c;
+}
+
+
+/* =========================
+   WINNER POPUP
+========================= */
+
+.winner-popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+.winner-popup.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+.winner-card {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 25, 25, 0.95),
+            rgba(8, 8, 8, 0.96)
+        );
+
+    border: 1px solid rgba(255, 122, 0, 0.35);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(255, 122, 0, 0.12);
+
+    transform: scale(0.85);
+
+    transition: 0.35s;
+}
+
+.winner-popup.show .winner-card {
+    transform: scale(1);
+
+    animation: popupShow 0.45s ease;
+}
+
+@keyframes popupShow {
+
+    0% {
+        transform: scale(0.7);
+    }
+
+    70% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.close-popup {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #aaa;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close-popup:hover {
+    color: white;
+
+    background: #ff3d00;
+
+    transform: rotate(90deg);
+}
+
+.winner-icon {
+    font-size: 55px;
+
+    margin-bottom: 8px;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 122, 0, 0.45));
+}
+
+.winner-card h2 {
+    color: #ff7a00;
+
+    font-size: 32px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 15px rgba(255, 122, 0, 0.3);
+}
+
+.popup-label {
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.popup-value {
+    margin-top: 6px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    word-break: break-all;
+}
+
+.popup-value.reward {
+    color: #ff7a00;
+
+    border-color: rgba(255, 122, 0, 0.25);
+
+    text-shadow:
+        0 0 10px rgba(255, 122, 0, 0.25);
+}
+
+#spinAgainBtn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8a00,
+            #ff3d00
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+#spinAgainBtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 61, 0, 0.3);
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+@keyframes confettiFall {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero-header {
+        width: calc(100% - 24px);
+
+        margin-top: 12px;
+
+        padding: 14px 16px;
+
+        flex-direction: column;
+
+        border-radius: 16px;
+    }
+
+    .logo-area {
+        width: 100%;
+    }
+
+    .header-center {
+        display: block;
+    }
+
+    .giveaway-status {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .status-box {
+        flex: 1;
+
+        max-width: 120px;
+    }
+
+    .spin-page {
+        padding: 25px 12px 40px;
+    }
+
+    .spin-box {
+        padding: 25px 15px;
+
+        border-radius: 20px;
+    }
+
+    .wheel-container {
+        width: min(500px, 92vw);
+        height: min(500px, 92vw);
+    }
+
+    #wheel {
+        width: min(500px, 92vw);
+        height: min(500px, 92vw);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .brand-main {
+        gap: 8px;
+    }
+
+    .logo-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .site-logo {
+        width: 37px;
+        height: 37px;
+    }
+
+    .logo-area h1 {
+        font-size: 24px;
+    }
+
+    .header-center h2 {
+        font-size: 15px;
+    }
+
+    .header-center p {
+        font-size: 10px;
+    }
+
+    .uid-input {
+        flex-direction: column;
+    }
+
+    .uid-input input,
+    .uid-input button {
+        width: 100%;
+    }
+
+    .spin-box h2 {
+        font-size: 23px;
+    }
+
+    .wheel-pointer {
+        font-size: 30px;
+
+        top: -8px;
+    }
+
+    #spinWheelBtn {
+        font-size: 16px;
+
+        padding: 15px 20px;
+    }
+
+    .winner-card {
+        padding: 30px 18px;
+    }
+
+    .winner-card h2 {
+        font-size: 27px;
+    }
+}

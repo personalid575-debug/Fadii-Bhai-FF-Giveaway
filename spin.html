@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fadii FF - Spin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero-header">
+
+        <div class="logo-area">
+
+            <div class="brand-main">
+
+                <div class="logo-circle">
+                    <img
+                        src="./images/logo.png"
+                        class="site-logo"
+                        alt="Fadii FF Logo"
+                    >
+                </div>
+
+                <h1>
+                    FADII <span>FF</span>
+                </h1>
+
+            </div>
+
+            <div class="brand-tag">
+                🔥 OFFICIAL GIVEAWAY
+            </div>
+
+            <p>
+                FREE FIRE GIVEAWAY
+            </p>
+
+        </div>
+
+
+        <div class="header-center">
+
+            <h2>
+                🎁 FADII FF GIVEAWAY
+            </h2>
+
+            <p>
+                Spin • Win • Get Reward
+            </p>
+
+        </div>
+
+
+        <div class="giveaway-status">
+
+            <div class="status-box">
+
+                <span>
+                    STATUS
+                </span>
+
+                <strong>
+                    LIVE
+                </strong>
+
+            </div>
+
+
+            <div class="status-box">
+
+                <span>
+                    PLAYERS
+                </span>
+
+                <strong id="playerCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="spin-page">
+
+        <section class="spin-box">
+
+            <h2>
+                🎰 WINNER SPIN
+            </h2>
+
+            <p class="spin-subtitle">
+                Spin the wheel and find your lucky winner!
+            </p>
+
+
+            <div class="wheel-container">
+
+                <div class="wheel-pointer">
+                    ▼
+                </div>
+
+                <canvas
+                    id="wheel"
+                    width="500"
+                    height="500">
+                </canvas>
+
+            </div>
+
+
+            <button id="spinWheelBtn">
+                🎰 SPIN THE WHEEL
+            </button>
+
+
+            <button id="backToUidsBtn">
+                ← BACK TO UID LIST
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="winner-popup"
+        id="winnerPopup"
+    >
+
+        <div class="winner-card">
+
+            <button
+                class="close-popup"
+                id="closePopup"
+            >
+                ×
+            </button>
+
+
+            <div class="winner-icon">
+                🏆
+            </div>
+
+
+            <h2>
+                WINNER!
+            </h2>
+
+
+            <p class="popup-label">
+                PLAYER UID
+            </p>
+
+            <div
+                class="popup-value"
+                id="popupUid"
+            >
+                ---
+            </div>
+
+
+            <p class="popup-label">
+                REWARD
+            </p>
+
+            <div
+                class="popup-value reward"
+                id="popupReward"
+            >
+                ---
+            </div>
+
+
+            <button id="spinAgainBtn">
+                SPIN AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
