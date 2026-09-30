@@ -1074,6 +1074,11 @@ body::before {
 
         justify-content: center;
     }
+    .youtube-btn {
+    width: 100%;
+    max-width: 220px;
+    padding: 11px 15px;
+}
 
     .status-box {
         flex: 1;
@@ -1162,4 +1167,41 @@ body::before {
     .winner-card h2 {
         font-size: 27px;
     }
+}
+.youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    background: #ff0000;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 6px 18px rgba(255, 0, 0, 0.20);
+}
+
+.youtube-btn:hover {
+    background: #cc0000;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 25px rgba(255, 0, 0, 0.30);
 }
